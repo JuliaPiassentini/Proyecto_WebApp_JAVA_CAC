@@ -15,9 +15,9 @@ public class Conexion {
 
   private final static String JDBC_URL = 
   "jdbc:mysql://127.0.0.1:3306/pelis_web_primerabase?useSSL=false&useTimeZone=true&serverTimeZone=UTC&allowPublicKeyReference=true";
-  private final static String JDBC_USER = "root";
+  private final static String JDBC_USER = ".......";
    //Ingresan su contraseña para acceder a la base de datos,la de workbench
-  private final static String JDBC_PASS = "usuariomysql_1988";
+  private final static String JDBC_PASS = ".....";
 
 
   public static DataSource getDataSource() {

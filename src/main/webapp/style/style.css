@@ -1,0 +1,979 @@
+/* Pages */
+@import url("./css/login.css");
+@import url("./css/registrar.css");
+@import url("./css/slider.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Bebas Neue", sans-serif;
+  background: radial-gradient(139.54% 22.02% at 50.18% 100%, rgb(11, 23, 59) 0%, rgb(11, 23, 59) 31.77%, rgb(0, 0, 0) 100%) fixed;
+  color: #ffffff;
+  margin-top: 0;
+  padding-top: 0;  
+
+  
+}
+
+.cabecera {
+  margin-bottom: 0px;
+  margin-left: 0;
+  color: #d4af37;
+  width: 100%;
+ z-index: 20;
+  padding-top: 2em; 
+  padding-bottom: 1.5em;
+}
+
+.cabecera .min-height-index {
+  
+  min-height: 100vh;
+}
+
+main{
+  margin-top:0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 400px;
+  height: auto;
+  border: solid #d4af37;
+  border-radius: 30%;
+}
+
+/*------------------------//ESTILOS HEADER//--------------------------------------------------------*/
+
+.menu {
+   display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  font-size: 25px;
+ /*position:fixed;Se quite el fixed del nav presenta inconvenientes con los submenues al desplegarse bloquean otras funciones*/
+  top:0;
+  left: 0;  
+  min-width: 100%;
+  height: 5rem;
+  background-color: #080f28;
+ /*  opacity: 0.8; */
+  box-shadow: 0 12px 25px -16px black; 
+  margin-bottom: 0;
+}
+
+a {
+  color: #d4af37;
+}
+
+.responsive-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 70px;
+}
+
+/* .navbar{
+ position: absolute;
+} */
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 0;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+.icon-menu {
+  display: none;
+}
+
+.icon-menu-x {
+  display: none;
+}
+
+.input-search{
+padding: 0.1em;
+padding-left: 0.3em;
+font-size: 0.8em;
+max-width: 6em;
+height: 2em;
+}
+
+.header-content {
+ margin-top: 0; 
+  background-image: url(./images/header-portada.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  min-height: 85vh;
+}
+
+.portada_izquierda {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-self: flex-end;
+  margin-bottom: 50px;
+}
+
+.portada_izquierda img {
+  width: 400px;
+  margin-bottom: 0px;
+}
+
+.portada_izquierda a {
+  margin-top: 10px;
+  font-size: 18px;
+  transition: color 2s ease-in;
+  transition: font-size 2s ease-in;
+}
+
+.portada_derecha {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  /* margin-left: 550px;*/
+  align-self: self-start;
+  gap: 30px;
+  /*margin-bottom: 250px;*/
+}
+
+.portada_derecha h2 {
+  color: #3333339d;
+  font-size: 80px;
+  margin-left: 250px;
+  margin-top: 100px;
+}
+
+.portada_derecha img {
+  width: 150px;
+  height: 150px;
+  margin-left: 450px;
+  /*margin-bottom: 250px;*/
+}
+
+.btn-log {
+  display: inline-block;
+  background-color: #d4af37;
+  color: #080f28;
+  padding: 0.1em 0.3em;
+  border-radius: 2%;
+  width: 4em;
+}
+
+.menu.container a :hover {
+  color: #3333339d;
+}
+
+.btn-portada p {
+  display: inline-block;
+  padding: 5px 5px;
+  margin-left: 280px;
+  color: black;
+  background-color: #d4af37;
+}
+
+.portada_izquierda a :hover {
+  color: #080f28;
+  font-size: 20px;
+}
+
+/*------------------------//ESTILOS SECCIONES PELICULAS MÁS VISTAS Y ESTRENOS//--------------------------------------------------------*/
+.main-container{
+  display: flex;
+  gap:4em;
+  }
+  
+  .sidebar{
+    display: flex;
+   min-width: 225px;
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+    margin-top: 4.5em;
+    margin-left: 1.7em;    
+    padding: 1em;
+    flex-grow: 0;
+  }
+  
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    
+  }
+  
+
+
+
+
+.card-trending-container,
+.card-news-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-wrap: wrap; y gap de 10 incluir eltitulo y año dentro del flex aplicar un flex en card trendin y card news para alinear sus elementos*/
+  gap: 30px;
+  justify-content: left;
+  }
+
+  .card-trending-container{
+    padding-left: 3em;
+    
+  }
+
+  .card-news-container{
+    justify-content: space-around;
+  }
+
+
+.card-trending,
+.card-news {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 10em;
+  /*Estableciendo un ancho para el padre soluciono el problema del título largo que excede el ancho de la imagen el cual agranda a todo el contenedor trending y dicho item  queda distinto al resto de las card con título corto*/
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  /*Efecto de animación para cuando aplique hover no sea tan brusco el cambio*/
+  transition: width 0.5s linear;
+}
+
+.card-trending:hover,
+.card-news:hover {
+  width: 13em;
+  border: solid #d4af37 thin;
+  border-radius: 2%;
+  padding: 0.3em;
+  background-color: #060b1e;
+}
+
+.card-trending img,
+.card-news img {
+  width: 100%;
+  border-radius: 2%;
+}
+
+.movies.container {
+  color: #d4af37;
+}
+
+.movies.container h2 {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-align: center;
+  background-color: #060b1e;
+  min-width: 100%;
+  padding: 0.2em;
+}
+
+.seccion-2 h2{
+  text-align: center;
+  background-color: #060b1e;
+  min-width: 100%;
+  padding: 0.2em;
+}
+
+.card-content {
+  letter-spacing: 2px;
+  line-height: 25px;
+  padding-left: 0.1em;
+}
+
+.btn-load {
+  display: inline-block;
+  padding: 5px 5px;
+  margin-top: 20px;
+  margin-left: 95%;
+  color: black;
+  background-color: #d4af37;
+  border-radius: 2%;
+  cursor: pointer;
+  align-self: end;
+  /*transition: color 0.3s ease-in; 
+  transition: border 0.3s ease-in; */
+}
+
+.btn-load:hover {
+  color: #3333339d;
+  border: solid #080f28;
+}
+
+/*------------------------//ESTILOS ASIDE PELICULAS POR CATEGORÍA//----------------------------------------------------*/
+
+.sidebar h2 {
+  
+  letter-spacing: 0.03em;
+}
+
+.category-container{
+  background-color: #060b1e;
+  border-radius: 2%;
+  padding-top: 0.5em;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.category-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.category-container ul li  {
+  display: inline-block;
+  font-size: 1.2em;
+  padding: 0.3em;
+  /*margin: 0.3em;*/
+  cursor: pointer;
+  color:#d4af37;
+}
+
+.category-container ul li:hover {
+  background-color: #202746;
+  width: 100%;
+ 
+}
+
+/*------------------------//ESTILOS FOOTER//--------------------------------------------------------*/
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 2em;
+  background-color: #060b1e;
+  margin-bottom: 0px;
+  align-items: center;
+  
+}
+
+.container.footer{
+  margin-top: 2em;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  min-width: 100%;
+  padding-top: 0em;
+}
+
+.footer-menu {
+  padding-top: 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5em;
+}
+
+.logo-footer {
+  width: 20em;
+  height: auto;
+  border: solid #98852984;
+  border-radius: 30%;
+  opacity: 0.5;
+}
+
+.footer-menu ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  font-size: 18px;
+}
+
+footer p {
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+  text-align: center;
+  background-color: #070708;
+  min-width: 100%;
+  padding: 1em;
+  margin-bottom: 0px;
+}
+
+
+.icons-branding {
+  display: flex;
+  gap: 1em;
+  font-size: 2em;
+}
+
+.footer-menu ul li a {
+  padding: 0.3em;
+}
+
+.footer-menu ul li a:hover {
+  background-color:#202746;
+  border-radius: 6%;
+}
+
+/*-------------------------------------- MEDIA QUERIES ----------------------------------------*/
+
+/*-----PANTALLAS MENORES A 1201px---------*/
+
+@media (max-width: 1200px) {
+  .cabecera {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  .content{
+    margin-top: -10px;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /*-------------PORTADA---------------*/
+  .header-content {
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 0px;
+    background-image: url(./images/header-portada.png);
+    background-position: top center;
+    /* background-repeat: no-repeat;*/
+    background-size: cover;
+    display: flex;
+    min-height: 80vh;
+  }
+
+  .portada_derecha {
+    width: 50%;
+    margin-top: 20px;
+    align-self: self-start;
+    gap: 20px;
+  }
+
+  .portada_derecha h2 {
+    color: #3333339d;
+    font-size: 78px;
+    margin-left: 250px;
+    margin-top: 100px;
+  }
+
+  .portada_derecha a {
+    justify-content: center;
+  }
+
+  .portada_derecha img {
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    padding-left: 0px;
+    margin-left: 65%;
+  }
+
+  /*SECCIONES */
+
+  .card-trending,
+  .card-news {
+    gap: 6px;
+    width: 15em;
+    transition: background-color 0.5s ease;
+    transition: width 0.5s linear;
+  }
+
+  .card-trending:hover,
+  .card-news:hover {
+    width: 18em;
+    border-radius: 2%;
+    padding: 0.3em;
+    background-color: #060b1e;
+    font-size: 1em;
+  }
+
+  .btn-load {
+    padding: 7px 7px;
+    margin-bottom: 20px;
+    margin-left: 90%;
+  }
+
+  /*-------------FOOTER---------------*/
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 2em;
+  }
+
+  .footer-menu {
+    padding-top: 3.5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4em;
+  }
+
+  .logo-footer {
+    width: 15em;
+  }
+}
+
+@media (max-width: 990px) {
+  
+.content{
+  margin-top: -20px;
+}
+
+  .container {
+    max-width: 850px;
+    
+  }
+
+  
+
+  .main-container{
+    flex-direction: column-reverse;
+  }
+
+  .menu.container a :hover {
+    color: hsla(46, 65%, 52%, 0.644);
+  }
+
+  .navbar ul li a:hover {
+    color: hsla(46, 65%, 52%, 0.644);
+    text-decoration: none;
+  }
+
+  .menu {
+    position: relative;
+    min-width: 100%;
+    text-align: center;
+    opacity: 1;
+    box-shadow: none;
+    margin-bottom: 0;
+    bottom: 0;
+    
+  }
+
+  .input-search{
+    display: none;
+  }
+
+  .responsive-menu {
+    display: none;
+    background-color: #080f28;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar ul li a,
+  .btn-log-contenedor {
+    display: block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 2%;
+    width: 600px;
+  }
+
+  .btn-log {
+    background-color: #080f28;
+    color: #d4af37;
+    width: 100%;
+  }
+
+  .navbar ul li a:hover,
+  .btn-log-contenedor a :hover {
+    background-color: rgba(99, 107, 135, 0.455);
+    color: #d4af37bc;
+  }
+
+  @keyframes showMenu {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .responsive-menu.active {
+    display: flex;
+    animation: showMenu 400ms ease-in-out both;
+    /*Animación que retarda aprición y desaparición del menú  para que no sea tan brusco el cambio*/
+  }
+
+  .logo {
+    margin-left: 50px;
+    width: 13em;
+  }
+
+  .icon-menu {
+    margin-right: 50px;
+  }
+
+  .icon-menu-x {
+    font-size: 1.5em;
+    margin-right: 50px;
+  }
+
+  .btn-log-contenedor {
+    top: 230px;
+  }
+
+  .btn-log {
+    display: block;
+  }
+
+  @keyframes showMenuHamb {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .icon-menu {
+    display: initial;
+    /*Hacemos aparecer el menú hamburguesa, oculto en el diseño desktop con display none*/
+    font-size: 1.5em;
+    animation: showMenuHamb 350ms ease-in-out;
+  }
+
+  .icon-menu.animado {
+    display: none;
+  }
+
+  @keyframes showMenuX {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .icon-menu-x.animadoX {
+    display: initial;
+    animation: showMenuX 350ms ease-in-out both;
+  }
+
+  .portada_derecha {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-top: 0px;
+    gap: 5px;
+  }
+
+  .portada_derecha h2 {
+    color: #3333339d;
+    font-size: 50px;
+    margin-left: 2em;
+    margin-top: 0.1em;
+    padding-top: 0;
+  }
+
+.sidebar{
+  margin-top: 1em;
+  margin-right: 1.5em;
+  background-color: #060b1e;
+}
+
+.sidebar h2{
+  text-align: center;
+  margin-bottom: 1em;
+  color: #d4af37;
+  background-color: #060b1e;
+}
+
+  .category-list{
+    
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:left;
+    background-color: #080f28;
+    padding: 0.5em;
+    gap:1em;
+    
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-bottom: 2em;
+  }
+
+  .footer-menu {
+    padding-top: 2.3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .logo-footer {
+    width: 13em;
+  }
+
+  .footer-menu ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+    font-size: 18px;
+  }
+
+  .icons-branding {
+    display: flex;
+    gap: 0.5em;
+    font-size: 2em;
+  }
+
+  footer p {
+    opacity: 0.5;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-size: smaller;
+  }
+}
+
+@media (max-width: 880px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .portada_izquierda {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 0.1em;
+    padding-bottom: 0em;
+  }
+
+  .portada_izquierda img {
+    width: 300px;
+    margin-top: 90%;
+    margin-bottom: 0px;
+  }
+
+  .portada_izquierda a {
+    margin-top: 0.1em;
+    margin-bottom: 0em;
+    font-size: 10px;
+    transition: color 2s ease-in;
+    transition: font-size 2s ease-in;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .container{
+   width: 90%;
+  } 
+
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+ .header-content{
+  width: 100%; 
+  display: flex;
+ flex-direction: column-reverse;
+  }
+
+  .portada_derecha{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0%;
+  }
+
+  .portada_izquierda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /* flex-direction: row;   */
+    height: 100%;
+    margin-bottom: 0%;
+  }
+
+  .portada_izquierda img{
+    width: auto;
+  }
+
+  .btn-portada{
+    text-align: start;
+    margin-left: -50%;
+    }
+
+  .btn-portada p{
+    font-size: 2em;
+  }  
+
+  .btn-portada p:hover{
+    box-shadow:0px 0px 10px 2px rgba(40, 39, 39, 0.5);
+    border: solid thin;
+  } 
+
+  .movies.container h2 {
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    font-size: 40px;
+  }
+
+  .responsive-menu {
+    padding-top: 1em;
+  }
+  .card-trending-container,
+  .card-news-container {
+    gap: 3em;
+    padding: 4em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  .card-trending,
+  .card-news {
+    width: 30em;
+    margin: 0;
+    gap: 1em;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4em;
+    margin-top: 0.8em;
+    font-size: 30px;
+    gap: 0.5em;
+  }
+
+  .card-trending:hover,
+  .card-news:hover {
+    width: 30em;
+    border: solid #d4af37 thin;
+    border-radius: 2%;
+    padding: 0.8em;
+    background-color: #060b1e;
+    opacity: 0.8;
+  }
+
+  .btn-load {
+    padding: 7px 7px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: 50%;
+  }
+
+    
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: #D4AF37;
+}
+
+.topnav a.active {
+  background-color: #333333;
+  color: #D4AF37;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/* .fa-house:before {
+  background: red;
+  color: blue;
+}
+
+.fa-house:before {
+  background: yellow;
+  color: blue;
+} */
+
+span {
+  margin-left: 5px;
+}
+
+}

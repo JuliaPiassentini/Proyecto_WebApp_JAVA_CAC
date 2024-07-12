@@ -1,0 +1,45 @@
+.table-container{
+   /* height: 90vh;*/
+    
+}
+.main-admin{
+    margin-top: 2em;
+
+}
+
+.table-container h3{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid  #f2f2f2;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #03050e;
+}
+tr:nth-child(even) {
+    background-color:#03050e; ;
+}
+tr:hover {
+    background-color:#080f28 ;
+}
+.edit, .delete {
+    font-size: 1.5em;
+    cursor: pointer;
+    text-decoration: none;
+}
+.edit{
+    color: rgb(2, 60, 12);
+}
+
+.delete{
+color: tomato;
+}
